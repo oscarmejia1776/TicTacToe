@@ -1,0 +1,38 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 264px; /* Adjust the width to contain larger cells */
+}
+
+.row {
+  display: flex;
+  margin-bottom: 4px; /* Increase the margin between rows */
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-sizing: border-box; /* Include border in the width calculation */
+}
+
+.cell:hover {
+  background-color: #f9f9f9;
+}
+
+.cell:not(:last-child) {
+  border-right: 1px solid #ccc; /* Add border between cells */
+}
+
+.row:not(:last-child) {
+  border-bottom: 0px solid #ccc; /* Add border between rows */
+}
